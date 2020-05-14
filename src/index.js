@@ -8,6 +8,8 @@ import MyType from './components/MyType';
 import MyAttrMulti from './components/MyAttrMulti';
 import MyHelloContent from './components/MyHelloContent';
 import MyBook from './components/MyBook';
+import MyProp, {Member} from './components/MyProp';
+import MyHelloDef from './components/MyHelloDef';
 
 const data = {
   name: 'テスト',
@@ -36,6 +38,13 @@ ReactDOM.render(
       <b>テスト</b>
     </MyHelloContent>
     <MyBook info={book} />
+    {/* 以下エラーパターン */}
+    {/* <MyProp prop1="test" /> */}
+    {/* <MyProp prop2="test" /> */}
+    {/* <MyProp prop3={new Member()} /> */}
+    {/* <MyProp prop4={[ 1000, 'テスト']} /> */}
+    <MyProp prop5={{ age: 40, sex: '男'}} />
+    <MyHelloDef />
   </div>,
   document.getElementById('root')
 );
