@@ -8,8 +8,9 @@ import MyType from './components/MyType';
 import MyAttrMulti from './components/MyAttrMulti';
 import MyHelloContent from './components/MyHelloContent';
 import MyBook from './components/MyBook';
-import MyProp, {Member} from './components/MyProp';
+// import MyProp, {Member} from './components/MyProp';
 import MyHelloDef from './components/MyHelloDef';
+import MyArticle from './components/MyArticle';
 
 const data = {
   name: 'テスト',
@@ -23,6 +24,23 @@ const book = {
   price: 454,
   published: 'WINGSプロジェクト'
 }
+
+const articles = [
+  {
+    url: 'https://www.atmarkit.co.jp/ait/series/9383/',
+    title: 'AngularTIPS',
+    description:'人気のJavaScriptフレームワーク「Angular」の目的別リファレンス',
+    isNew: true
+  },
+  {
+    url: 'https://google.com/',
+    title: 'Test',
+    description:'テストです(googleのHPに遷移します。)',
+    isNew: false
+  },
+]
+
+// const list = articles.map((article) => <MyArticle {...article} key={article.url} />);
 
 ReactDOM.render(
   <div>
@@ -43,8 +61,13 @@ ReactDOM.render(
     {/* <MyProp prop2="test" /> */}
     {/* <MyProp prop3={new Member()} /> */}
     {/* <MyProp prop4={[ 1000, 'テスト']} /> */}
-    <MyProp prop5={{ age: 40, sex: '男'}} />
+    {/* <MyProp prop5={{ age: 40, sex: '男'}} /> */}
     <MyHelloDef />
+    <dl>
+      {articles.map((article) =>
+        <MyArticle {...article} key={article.url} />
+      )}
+    </dl>
   </div>,
   document.getElementById('root')
 );
