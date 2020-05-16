@@ -11,6 +11,12 @@ import MyBook from './components/MyBook';
 // import MyProp, {Member} from './components/MyProp';
 import MyHelloDef from './components/MyHelloDef';
 import MyArticle from './components/MyArticle';
+import MyEvent from './components/MyEvent';
+import MyPool from './components/MyPool';
+import MyState from './components/MyState';
+import MyParent from './components/MyParent';
+import MyForm from './components/MyForm';
+import MyFormUn from './components/MyFormUn';
 
 const data = {
   name: 'テスト',
@@ -68,6 +74,12 @@ ReactDOM.render(
         <MyArticle {...article} key={article.url} />
       )}
     </dl>
+    <MyEvent greet="Hello" />
+    <MyPool />
+    <MyState />
+    <MyParent />
+    <MyForm />
+    <MyFormUn />
   </div>,
   document.getElementById('root')
 );
