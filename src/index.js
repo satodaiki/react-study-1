@@ -17,6 +17,13 @@ import MyState from './components/MyState';
 import MyParent from './components/MyParent';
 import MyForm from './components/MyForm';
 import MyFormUn from './components/MyFormUn';
+import MyTextarea from './components/MyTextarea';
+import MySelect from './components/MySelect';
+import MyList from './components/MyList';
+import MyRadio from './components/MyRadio';
+import MyCheck from './components/MyCheck';
+import MyCheckMulti from './components/MyCheckMulti';
+import MyFile from './components/MyFile';
 
 const data = {
   name: 'テスト',
@@ -80,6 +87,13 @@ ReactDOM.render(
     <MyParent />
     <MyForm />
     <MyFormUn />
+    <MyTextarea />
+    <MySelect />
+    <MyList />
+    <MyRadio />
+    <MyCheck />
+    <MyCheckMulti />
+    <MyFile />
   </div>,
   document.getElementById('root')
 );
