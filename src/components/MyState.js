@@ -7,16 +7,23 @@ export default class MyState extends Component {
         this.state = {
             current: new Date()
         };
-        setInterval(() => {
+    }
+
+    componentDidMount() {
+        this.timer = setInterval(() => {
             this.setState({
                 current: new Date()
             });
         }, 1000);
     }
 
+    componentWillUnmount() {
+        clearInterval(this.timer);
+    }
+
     render() {
         return (
-            <div>現在時刻は、{this.state.current.toLocaleString()}</div>
+            <div>（ライフサイクルメソッド）現在時刻は、{this.state.current.toLocaleString()}</div>
         );
     }
 }
