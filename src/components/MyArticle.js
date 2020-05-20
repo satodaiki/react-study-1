@@ -23,7 +23,7 @@ export default class MyArticle extends Component {
                     {/* {this.props.isNew && <MyNew /> } */}
                 </dt>
                 <dd>
-                    {this.props.description}
+                    {this.props.description}<br />
                 </dd>
             </React.Fragment>
         );

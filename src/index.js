@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
+import App from './App';
 import MyHello from './components/MyHello';
 import MyType from './components/MyType';
 import MyAttrMulti from './components/MyAttrMulti';
@@ -57,6 +58,7 @@ const articles = [
 
 ReactDOM.render(
   <div>
+    <App />
     <MyHello name="ああああ" />
     <MyType value="success" />
     <MyType value={'test'} />
